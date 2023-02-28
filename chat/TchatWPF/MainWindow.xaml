@@ -1,0 +1,92 @@
+﻿<Window x:Class="TchatWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TchatWPF"
+        Closing="Window_Closing"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl Margin="0,10,0,0">
+        <TabItem Header="Chat">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <RichTextBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" IsReadOnly="True" x:Name="ChatTB">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run x:Name="Chat" Text="Bienvenue dans le Chat : "/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+
+                <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="Reponse" KeyUp="Envoyer_KeyUp" TextWrapping="Wrap" AcceptsReturn="True" GotFocus="Reponse_GotFocus">Tapez votre message...</TextBox>
+                <Button Grid.Column="2" Grid.Row="1" x:Name="envoyer" Click="Envoyer" >Envoyer</Button>
+
+                <TextBox Grid.Row="2" Grid.Column="0" Text="Tapez votre pseudo..." x:Name="Pseudo"></TextBox>
+
+                <TextBox Grid.Row="2" Grid.Column="1" Text="Tapez l'IP du server..." x:Name="IP"></TextBox>
+
+                <TextBox Grid.Row="2" Grid.Column="2" Text="Tapez le port..." x:Name="Port"></TextBox>
+
+                <Button Grid.Row="3" Grid.Column="0" Click="Snake_Click"  x:Name="Snake">Snake</Button>
+                <Button Grid.Row="3" Grid.Column="1" Click="ButtonConnect_Click" x:Name="connecter">Se Connecter</Button>
+                <Button Grid.Row="3" Grid.Column="2"  x:Name="deconnecter" Click="deconnecter_Click" >Se Deconnecter</Button>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Information systême">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0">Nom de la machine :</Label>
+                <TextBox IsReadOnly="true" Grid.Row="1" Grid.Column="0" x:Name="LB_nomMachine"></TextBox>
+
+                <Label Grid.Row="2" Grid.Column="0">Disques durs :</Label>
+                <TextBox IsReadOnly="true" Grid.Row="3" Grid.Column="0" x:Name="Disques"></TextBox>
+
+                <Label Grid.Row="4" Grid.Column="0">Les IPs locales</Label>
+                <TextBox IsReadOnly="true" Grid.Row="5" Grid.Column="0" x:Name="IPLocales"></TextBox>
+
+                <Label Grid.Row="6" Grid.Column="0">Connexions actives</Label>
+                <TextBox IsReadOnly="true" Grid.Row="7" Grid.Column="0" x:Name="ActiveConn"></TextBox>
+
+
+                <Label Grid.Row="0" Grid.Column="1">Nom Utilisateur :</Label>
+                <TextBox IsReadOnly="true" Grid.Row="1" Grid.Column="1" x:Name="NomUtilisateur"></TextBox>
+
+                <Label Grid.Row="2" Grid.Column="1">Utilisation mémoire :</Label>
+                <TextBox IsReadOnly="true" Grid.Row="3" Grid.Column="1" x:Name="RAMinstall"></TextBox>
+
+                <Label Grid.Row="4" Grid.Column="1">Clés Registres</Label>
+                <TextBox IsReadOnly="true" Grid.Row="5" Grid.Column="1" x:Name="cleRegistre"></TextBox>
+
+                <Label Grid.Row="6" Grid.Column="1">Liste des périphériques</Label>
+                <TextBox IsReadOnly="true" Grid.Row="7" Grid.Column="7" x:Name="ListePeriph"></TextBox>
+
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>

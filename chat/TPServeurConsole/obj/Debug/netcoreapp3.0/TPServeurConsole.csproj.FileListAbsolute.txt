@@ -1,0 +1,11 @@
+C:\Users\afpa\source\repos\TPServeurConsole\obj\Debug\netcoreapp3.0\TPServeurConsole.csprojAssemblyReference.cache
+C:\Users\afpa\source\repos\TPServeurConsole\obj\Debug\netcoreapp3.0\TPServeurConsole.AssemblyInfoInputs.cache
+C:\Users\afpa\source\repos\TPServeurConsole\obj\Debug\netcoreapp3.0\TPServeurConsole.AssemblyInfo.cs
+C:\Users\afpa\source\repos\TPServeurConsole\bin\Debug\netcoreapp3.0\TPServeurConsole.exe
+C:\Users\afpa\source\repos\TPServeurConsole\bin\Debug\netcoreapp3.0\TPServeurConsole.deps.json
+C:\Users\afpa\source\repos\TPServeurConsole\bin\Debug\netcoreapp3.0\TPServeurConsole.runtimeconfig.json
+C:\Users\afpa\source\repos\TPServeurConsole\bin\Debug\netcoreapp3.0\TPServeurConsole.runtimeconfig.dev.json
+C:\Users\afpa\source\repos\TPServeurConsole\bin\Debug\netcoreapp3.0\TPServeurConsole.dll
+C:\Users\afpa\source\repos\TPServeurConsole\bin\Debug\netcoreapp3.0\TPServeurConsole.pdb
+C:\Users\afpa\source\repos\TPServeurConsole\obj\Debug\netcoreapp3.0\TPServeurConsole.dll
+C:\Users\afpa\source\repos\TPServeurConsole\obj\Debug\netcoreapp3.0\TPServeurConsole.pdb

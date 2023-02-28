@@ -1,0 +1,11 @@
+C:\inetpub\wwwroot\chat\TPServeurConsole\bin\Debug\netcoreapp2.1\TPServeurConsole.deps.json
+C:\inetpub\wwwroot\chat\TPServeurConsole\bin\Debug\netcoreapp2.1\TPServeurConsole.runtimeconfig.json
+C:\inetpub\wwwroot\chat\TPServeurConsole\bin\Debug\netcoreapp2.1\TPServeurConsole.runtimeconfig.dev.json
+C:\inetpub\wwwroot\chat\TPServeurConsole\bin\Debug\netcoreapp2.1\TPServeurConsole.dll
+C:\inetpub\wwwroot\chat\TPServeurConsole\bin\Debug\netcoreapp2.1\TPServeurConsole.pdb
+C:\inetpub\wwwroot\chat\TPServeurConsole\obj\Debug\netcoreapp2.1\TPServeurConsole.csprojAssemblyReference.cache
+C:\inetpub\wwwroot\chat\TPServeurConsole\obj\Debug\netcoreapp2.1\TPServeurConsole.csproj.CoreCompileInputs.cache
+C:\inetpub\wwwroot\chat\TPServeurConsole\obj\Debug\netcoreapp2.1\TPServeurConsole.AssemblyInfoInputs.cache
+C:\inetpub\wwwroot\chat\TPServeurConsole\obj\Debug\netcoreapp2.1\TPServeurConsole.AssemblyInfo.cs
+C:\inetpub\wwwroot\chat\TPServeurConsole\obj\Debug\netcoreapp2.1\TPServeurConsole.dll
+C:\inetpub\wwwroot\chat\TPServeurConsole\obj\Debug\netcoreapp2.1\TPServeurConsole.pdb
