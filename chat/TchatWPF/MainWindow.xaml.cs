@@ -26,12 +26,29 @@ namespace TchatWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        //SpeechSynthesizer pour ajouter la sortie à un flux qui contient les données audio au format Waveform.
         private SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
-        
+
+        //Le programme de socket client C # est la deuxième partie du programme de socket serveur C #
         public Socket MonSocketClient;
+
+        //Un thread ou fil ou tâche est similaire à un processus car tous deux représentent l'exécution d'un ensemble d'instructions
+        //du langage machine d'un processeur. Du point de vue de l'utilisateur, ces exécutions semblent se dérouler en parallèle
         public Thread MonThread;
+
+        //Delegate est un type qui encapsule sans risque une méthode ; il est similaire à un pointeur de fonction en C et C++.
+        //Toutefois, à la différence des pointeurs de fonction C, les délégués sont orientés objet, de type sécurisé et sûrs.
+        //Le type d'un délégué est défini par le nom du délégué. L’exemple suivant déclare un délégué nommé Del qui peut encapsuler
+        //une méthode acceptant une chaîne (string) comme argument et qui retourne void :
         public delegate void dEcrit(string texte);
+
         //public delegate void dReception(Byte[] bytes);
+
+
+        //es documents dynamiques sont conçus pour optimiser l’affichage et la lisibilité.Au lieu d’avoir une disposition prédéfinie,
+        //ces documents dynamiques ajustent et refluent dynamiquement leur contenu en fonction des variables d’exécution telles 
+        //que la taille de la fenêtre, la résolution de l’appareil et les préférences facultatives de l’utilisateur.
+        //En outre, les documents dynamiques offrent des fonctionnalités de document avancées, telles que la pagination et les colonnes.
         FlowDocument flowDocument = new FlowDocument();
 
         public MainWindow()
@@ -49,6 +66,8 @@ namespace TchatWPF
             NomEtIP();
             //speechSynthesizer.SelectVoiceByHints(VoiceGender.Male, VoiceAge.Adult);
             //speechSynthesizer.SelectVoice("Microsoft Paul Desktop");
+
+            //SpeakAsync méthode génèrent de la parole de manière asynchrone.
             speechSynthesizer.SpeakAsync("Bienvenue, " + Pseudo.Text);
         }
 
@@ -56,6 +75,8 @@ namespace TchatWPF
         private void ButtonConnect_Click(object sender, RoutedEventArgs e)
         {
             MonSocketClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+            //Verifie si l'ip est valide(=4), en splittant l'ip sur le point  
             char separator = Convert.ToChar('.');
             string[] numCompte = IP.Text.Split(separator);
             if(numCompte.Length != 4)
@@ -63,11 +84,18 @@ namespace TchatWPF
                 EcritureMessage("Adresse IP non valide.");
                 return;
             }
+
+
             try
             {
                 string ip = IP.Text;
+                //Fournit une adresse IP(Internet Protocol)
                 IPAddress adresse = IPAddress.Parse(ip);
+
+                //Représente un point de terminaison du réseau comme une adresse IP et un numéro de port
                 IPEndPoint monEP = new IPEndPoint(adresse, Convert.ToInt32(Port.Text));
+
+                //Connection de l'utilisateur
                 MonSocketClient.Connect(monEP);
             }
             catch (Exception ex)
@@ -89,7 +117,10 @@ namespace TchatWPF
                 deconnecter.IsEnabled = true;
                 envoyer.IsEnabled = true;
 
+                //Message encodé en ut8
+                //GetBytes-> En cas de substitution dans une classe dérivée, encode tous les caractères de la chaîne spécifiée en séquence d'octet
                 Byte[] Msg = Encoding.UTF8.GetBytes(Pseudo.Text);
+
                 int Envoi = MonSocketClient.Send(Msg);
                 MonThread = new Thread(ThreadLecture);
                 MonThread.Start();

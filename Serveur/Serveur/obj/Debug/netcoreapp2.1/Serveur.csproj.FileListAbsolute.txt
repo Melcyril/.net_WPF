@@ -1,0 +1,11 @@
+C:\inetpub\wwwroot\Serveur\Serveur\bin\Debug\netcoreapp2.1\Serveur.deps.json
+C:\inetpub\wwwroot\Serveur\Serveur\bin\Debug\netcoreapp2.1\Serveur.runtimeconfig.json
+C:\inetpub\wwwroot\Serveur\Serveur\bin\Debug\netcoreapp2.1\Serveur.runtimeconfig.dev.json
+C:\inetpub\wwwroot\Serveur\Serveur\bin\Debug\netcoreapp2.1\Serveur.dll
+C:\inetpub\wwwroot\Serveur\Serveur\bin\Debug\netcoreapp2.1\Serveur.pdb
+C:\inetpub\wwwroot\Serveur\Serveur\obj\Debug\netcoreapp2.1\Serveur.csprojAssemblyReference.cache
+C:\inetpub\wwwroot\Serveur\Serveur\obj\Debug\netcoreapp2.1\Serveur.csproj.CoreCompileInputs.cache
+C:\inetpub\wwwroot\Serveur\Serveur\obj\Debug\netcoreapp2.1\Serveur.AssemblyInfoInputs.cache
+C:\inetpub\wwwroot\Serveur\Serveur\obj\Debug\netcoreapp2.1\Serveur.AssemblyInfo.cs
+C:\inetpub\wwwroot\Serveur\Serveur\obj\Debug\netcoreapp2.1\Serveur.dll
+C:\inetpub\wwwroot\Serveur\Serveur\obj\Debug\netcoreapp2.1\Serveur.pdb
